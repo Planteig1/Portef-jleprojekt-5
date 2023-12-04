@@ -122,8 +122,7 @@ app.post('/create/user',(req, res) => {
                     'INSERT INTO `users`(username, email, password, last_name, first_name) VALUES(?,?,?,?,?)',
                     [username, email, password, firstName, lastName],
                     function (err, result) {
-                        console.log("You successfully created the account")
-                        res.send(result)
+                        res.send(`You've successfully created a account. WELCOME!`)
                     }
                 )
             } else {
@@ -191,6 +190,7 @@ app.post('/favorite/add',(req, res) => {
         }
     )
 })
+
 
 // -/favorites/:user_id
 
